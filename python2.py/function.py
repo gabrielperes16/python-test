@@ -1,10 +1,8 @@
-def soma(n1,n2):
-    print(f"OS valores são n1={n1} e n2={n2}")
-    s=n1+n2
-    print(f"A soma dos valores é {s}")
-    print()
-# PROGRAMA PRINCIPAL
+def calculo(larg, comp):
+    area = larg*comp
+    print(f"A Area do terreno é de {larg}x{comp}={area}")
 
-soma(4,5)
-soma(8,9)
-soma(2,1)
+
+larg = float(input("Digite a largura da area: "))
+comp = float(input("Digite o comprimento da area: "))
+calculo(larg, comp)
