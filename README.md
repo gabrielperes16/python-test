@@ -1,2 +1,2 @@
-Studies of List,Dictionary and fuction
+Studies of Tuplas, List, Dictionary and fuction
 
