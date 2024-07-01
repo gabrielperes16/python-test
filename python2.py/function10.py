@@ -1,6 +1,6 @@
 def temaverde(msg):
     quantidade=len(msg)+4
-    print("\033[01;42m~"*quantidade)
+    print(*quantidade)
     print(f"  {msg}")
     print('~'*quantidade)
 
@@ -10,21 +10,25 @@ def temaManual(txt):
     print(f"  {txt}")
     print('~'*quantidade)
 
-def linha():
-    print("="*261)
+
 def ajuda(com):
     help(com)
 
+
+c= ("\033[m"        #cor 0= cancelar
+    "\033[32;40m"   #cor 1= vermelho
+
+    
+    
+    )
+    
 ### Conteudo principal ###
 while True:
-    linha()
     mensagem=("SISTEMA DE AJUDA PyHELP")
     temaverde(mensagem)
     print('\033[m')
     texto=("Acessando o manual do comando ")
-    linha()
     comando=str(input("Function or library: "))
-    linha()
     temaManual(texto)
     print('\033[m')
     if comando.upper() == 'FIM':
