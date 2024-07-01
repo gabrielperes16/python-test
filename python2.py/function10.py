@@ -1,41 +1,23 @@
-def temaverde(msg):
-    quantidade=len(msg)+4
-    print("\033[01;42m~"*quantidade)
-    print(f"  {msg}")
-    print('~'*quantidade)
+def C_para_F(C):
+    F = (C*9/5) + 32
+    return F
 
-def temaManual(txt):
-    quantidade=len(txt)+4
-    print("\033[01;46m~"*quantidade)
-    print(f"  {txt}")
-    print('~'*quantidade)
-
-def linha():
-    print("="*261)
-def ajuda(com):
-    help(com)
-
-### Conteudo principal ###
-while True:
-    linha()
-    mensagem=("SISTEMA DE AJUDA PyHELP")
-    temaverde(mensagem)
-    print('\033[m')
-    texto=("Acessando o manual do comando ")
-    linha()
-    comando=str(input("Function or library: ")).upper()
-    linha()
-    temaManual(texto)
-    print('\033[m')
-    if comando.upper() == 'FIM':
-        break
-    else:
-        ajuda(comando)  
-print("Até Logo!")   
+def F_para_C(F):
+    C = (F-32)*5/9
+    return C
 
 
+def menu():
+    while True:
+        op = int(input('1. Celsius para Farenheit: \n' +
+                       '2. Farenheit para Celsius: '))
 
-
-
-
-
+        if op==1:
+            C=int( input('Graus Celsius: ') )
+            print('Convertido: ', C_para_F(C),' graus Farenheit\n')
+        elif op==2:
+            F=int( input('Graus Farenheit: ') )
+            print('Convertido: ', F_para_C(F),' graus Celsius\n')
+        else:
+            print('Opção inválida')
+menu()
