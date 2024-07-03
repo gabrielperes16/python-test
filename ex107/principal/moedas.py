@@ -16,3 +16,9 @@ def divisão(n):
 def dobro(n):
     dob=n*2
     return dob
+
+def moeda(n):
+    converter=str(n)
+    cigla="R$"+converter
+    return cigla
+
