@@ -1,21 +1,22 @@
-def aumentar(n):
+def aumentar(n, formato=False):
     calculo=(n/100)*150
-    return calculo
+    return calculo if formato is False else moeda(calculo)
 
 
-def subtração(n):
+def subtração(n,formato=False):
     calculo=(n/100)*80
-    return calculo
+    return calculo if formato is False else moeda(calculo)
 
 
-
-def divisão(n):
+def divisão(n,formato=False):
     div=n/2
-    return div
+    return div if formato is False else moeda(div)
 
-def dobro(n):
+
+def dobro(n,formato=False):
     dob=n*2
-    return dob
+    return dob if formato is False else moeda(dob)
+
 
 def moeda(n):
     converter=str(n)

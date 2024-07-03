@@ -1,6 +1,7 @@
 import moedas
 n=int(input("Digite o valor: "))
-print(f"O dobro de {n} é    {moedas.moeda(moedas.aumentar(n))}")
-print(f'o valor {n} - 20% é igual a:   {moedas.moeda(moedas.subtração(n))}')
-print(f"Apos a divisão de {n} por 2 o valor é igual a:  {moedas.moeda(moedas.divisão(n))}")
-print(f"O valor {n} multiplicado por 2 é igual a:   {moedas.moeda(moedas.dobro(n))}")
+print("=="*60)
+print(f"O dobro de {n} é    {moedas.aumentar(n,True)}")
+print(f'o valor {n} - 20% é igual a:   {moedas.subtração(n,True)}')
+print(f"Apos a divisão de {n} por 2 o valor é igual a:  {moedas.divisão(n,True)}")
+print(f"O valor {n} multiplicado por 2 é igual a:   {moedas.dobro(n,True)}")
